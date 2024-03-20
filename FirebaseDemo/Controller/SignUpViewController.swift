@@ -64,11 +64,21 @@ class SignUpViewController: UIViewController {
             // dismiss the keyboard
             self.view.endEditing(true)
             
-            // Dismiss sign up page -> main view, button segues the viewcontroller make the ibaction valid
-            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
-                UIApplication.shared.keyWindow?.rootViewController = viewController
-                self.dismiss(animated: true, completion: nil)
-            }
+            // fetch API check if the mail is valid
+            Auth.auth().currentUser?.sendEmailVerification(completion: {(error) in
+                print("Failed to send verification email")
+            })
+            let alertController = UIAlertController(title: "Email Need Verification", message: "We've send you a confirmation email to your email address. Please check your inbox and click the verification link that email to complete the sign up.", preferredStyle: .alert)
+            let okayAlert = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(okayAlert)
+            self.present(alertController, animated: true, completion: nil)
+            
+            
+//            // Dismiss sign up page -> main view, button segues the viewcontroller make the ibaction valid
+//            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+//                UIApplication.shared.keyWindow?.rootViewController = viewController
+//                self.dismiss(animated: true, completion: nil)
+//            }
             
         })
     
