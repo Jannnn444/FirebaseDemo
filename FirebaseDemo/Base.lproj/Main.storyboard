@@ -1348,6 +1348,9 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetPasswordWithSender:" destination="K0A-Xr-HjK" eventType="touchUpInside" id="iO6-Z4-9u1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
