@@ -1494,6 +1494,9 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoutWithSender:" destination="hia-fk-BdI" eventType="touchUpInside" id="ZEY-OC-O7s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w53-lW-c9k"/>
