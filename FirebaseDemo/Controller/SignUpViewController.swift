@@ -64,7 +64,7 @@ class SignUpViewController: UIViewController {
             // dismiss the keyboard
             self.view.endEditing(true)
             
-            // Dismiss sign up page -> main view
+            // Dismiss sign up page -> main view, button segues the viewcontroller make the ibaction valid
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
                 UIApplication.shared.keyWindow?.rootViewController = viewController
                 self.dismiss(animated: true, completion: nil)

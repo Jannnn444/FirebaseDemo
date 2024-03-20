@@ -312,6 +312,9 @@
                                                         <real key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginWithSender:" destination="M2r-cT-YlU" eventType="touchUpInside" id="moE-He-nHZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
