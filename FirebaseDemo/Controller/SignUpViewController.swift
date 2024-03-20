@@ -64,7 +64,7 @@ class SignUpViewController: UIViewController {
             // dismiss the keyboard
             self.view.endEditing(true)
             
-            // fetch API check if the mail is valid
+            // fetch API CHECK if the mail is valid will sent automatically or not will show error
             Auth.auth().currentUser?.sendEmailVerification(completion: {(error) in
                 print("Failed to send verification email")
             })
